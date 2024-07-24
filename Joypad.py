@@ -1,4 +1,3 @@
-# Add your Python code here. E.g.
 from microbit import *
 
 JoyStick_P = pin8
@@ -69,7 +68,7 @@ class JOYSTICK():
         elif Left > Precision and Down > Precision:
             return DIR['D_L']
         else:
-            Get_Rocker = DIR['NONE']
+            return DIR['NONE']
 
     def Listen_Key(self):
         if button_a.is_pressed():
@@ -101,10 +100,10 @@ class JOYSTICK():
             sleep(500)
         elif button == KEY['D']:
             display.show("D")
-            sleep(500)       
+            sleep(500)
         elif button == KEY['E']:
             display.show("E")
-            sleep(500)            
+            sleep(500)
         elif button == KEY['F']:
             display.show("F")
             sleep(500)
@@ -113,14 +112,14 @@ class JOYSTICK():
             sleep(500)
         elif direction == DIR['L']:
             display.show(Image.ARROW_W)
-            sleep(500)        
+            sleep(500)
         elif direction == DIR['U']:
             display.show(Image.ARROW_N)
             sleep(500)
         elif direction == DIR['D']:
             display.show(Image.ARROW_S)
-            sleep(500)   
-        
+            sleep(500)
+
 JoyStick = JOYSTICK()
 
 while True:

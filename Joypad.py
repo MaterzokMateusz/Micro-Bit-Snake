@@ -120,11 +120,3 @@ class JOYSTICK():
             display.show(Image.ARROW_S)
             sleep(500)
 
-JoyStick = JOYSTICK()
-
-while True:
-    button = JoyStick.Listen_Key()
-    direction = JoyStick.Listen_Dir()
-    JoyStick.Test(button,direction)
-    display.clear()
-
